@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "What is React?",
+      "description": "What makes React so special?",
+      "author_id": 3,
+      "answers": [
+        {
+          "id": 1,
+          "author_id": 2,
+          "content": "React is a powerful JavaScript library for building user interfaces (UIs) of web applications. It's one of the most popular front-end development libraries in the world, known for its efficiency, flexibility, and ease of use."
+        },
+        {
+          "id": 4,
+          "author_id": 3,
+          "content": "test"
+        }
+      ],
+      "tags": ["programming", "react"]
+    },
+    {
+      "id": 2,
+      "title": "What is Java?",
+      "description": "What makes Java so special?",
+      "author_id": 3,
+      "answers": [],
+      "tags": []
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "root",
+      "email": "root@test.xyz",
+      "password": "password"
+    },
+    {
+      "id": 2,
+      "username": "gpt",
+      "email": "gpt@test.xyz",
+      "password": "gpt3"
+    },
+    {
+      "id": 3,
+      "username": "vyom",
+      "email": "vyom.j@pm.me",
+      "password": "jain"
+    },
+    {
+      "id": 4,
+      "username": "jain",
+      "email": "vyom.j@pm.me",
+      "password": "jain"
+    },
+    {
+      "id": 5,
+      "username": "gpt3",
+      "email": "gpt@gpt.com",
+      "password": "gpt"
+    },
+    {
+      "id": 6,
+      "username": "abcd",
+      "email": "abcd@xyz.com",
+      "password": "abcd"
+    },
+    {
+      "id": 7,
+      "username": "hh",
+      "email": "hh@hh.com",
+      "password": "hh"
+    }
+  ],
+  "tags": ["programming", "react", "C++", "Java", "Misc."]
+}
