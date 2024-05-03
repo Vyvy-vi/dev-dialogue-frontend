@@ -17,13 +17,43 @@
           "content": "test"
         }
       ],
-      "tags": ["programming", "react"]
+      "tags": [
+        "programming",
+        "react"
+      ]
     },
     {
       "id": 2,
       "title": "What is Java?",
       "description": "What makes Java so special?",
       "author_id": 3,
+      "answers": [
+        {
+          "id": 1,
+          "author_id": 3,
+          "content": "Java is an object-oriented programming language"
+        },
+        {
+          "id": 2,
+          "author_id": 9,
+          "content": "i hate Java"
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": 3,
+      "title": "Why is C++ better than C?",
+      "description": "I have recently starting learning C++ in OOPs class, but I am unable to understand why there is need of C++ and Object Oriented Design, when C can be used for most intents and purposes.\n\nAlso, what is the use of java?",
+      "author_id": 3,
+      "answers": [],
+      "tags": []
+    },
+    {
+      "id": 4,
+      "title": "What is the use of useEffect()?",
+      "description": "I don't know how it works",
+      "author_id": 9,
       "answers": [],
       "tags": []
     }
@@ -70,7 +100,25 @@
       "username": "hh",
       "email": "hh@hh.com",
       "password": "hh"
+    },
+    {
+      "id": 8,
+      "username": "Rohit sir",
+      "email": "rohit@gfg",
+      "password": "password"
+    },
+    {
+      "id": 9,
+      "username": "arsalan",
+      "email": "kashmiri@gfg.com",
+      "password": "mir"
     }
   ],
-  "tags": ["programming", "react", "C++", "Java", "Misc."]
+  "tags": [
+    "programming",
+    "react",
+    "C++",
+    "Java",
+    "Misc."
+  ]
 }

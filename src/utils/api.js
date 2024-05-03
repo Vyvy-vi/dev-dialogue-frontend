@@ -13,7 +13,12 @@ export const checkUsernameAvailability = async (username) => {
 
 export const getUserCount = async () => {
   const res = await fetch(`http://localhost:8000/users`);
-  return await res.json().length;
+  return (await res.json()).length;
+};
+
+export const getQuestionCount = async () => {
+  const res = await fetch(`http://localhost:8000/questions`);
+  return (await res.json()).length;
 };
 
 export const verifyUser = async (username, password) => {
@@ -46,6 +51,25 @@ export const createUser = async (userData) => {
   } catch (error) {
     console.error("Error creating user:", error);
     return false;
+  }
+};
+
+export const createQuestion = async (questionData) => {
+  try {
+    const response = await fetch(`http://localhost:8000/questions`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...questionData }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error creating user: ${response.statusText}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error creating question:", error);
+    return null;
   }
 };
 

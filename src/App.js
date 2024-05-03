@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import MyQuestions from "./pages/MyQuestions";
 import MyAnswers from "./pages/MyAnswers";
+import AskQuestion from "./pages/AskQuestion";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/questions/:id" element={<Question />} />
         <Route path="/myquestions" element={<MyQuestions />} />
         <Route path="/myanswers" element={<MyAnswers />} />
+        <Route path="/ask" element={<AskQuestion />} />
       </Routes>
     </>
   );

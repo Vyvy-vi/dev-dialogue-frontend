@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { updateUser } from "../utils/api";
+import Sidebar from "../components/Sidebar";
 
 const Profile = () => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -38,46 +39,51 @@ const Profile = () => {
   return (
     <>
       {user && (
-        <div className="user-details card m-5">
-          <div className="card-header">
-            <h2>
-              <input
-                type="text"
-                value={username}
-                onChange={handleUsernameChange}
-                className="form-control"
-              />
-            </h2>
-          </div>
-          <div className="card-body">
-            <p className="card-text">
-              Email:
-              <input
-                type="email"
-                value={email}
-                onChange={handleEmailChange}
-                className="form-control"
-              />
-            </p>
-            <p className="card-text">
-              Password:
-              <input
-                type="password"
-                value={password}
-                onChange={handlePasswordChange}
-                className="form-control"
-              />
-            </p>
-            {user.avatar && (
-              <img
-                src={user.avatar}
-                alt="User Avatar"
-                className="img-rounded img-thumbnail"
-              />
-            )}
-            <button onClick={handleSave} className="btn btn-primary">
-              Save Changes
-            </button>
+        <div className="container-fluid m-4">
+          <div className="row">
+            <Sidebar />
+            <div className="col-md-9 col-sm-8 col-12 user-details card offset-3 w-10">
+              <div className="card-header">
+                <h2>
+                  <input
+                    type="text"
+                    value={username}
+                    onChange={handleUsernameChange}
+                    className="form-control"
+                  />
+                </h2>
+              </div>
+              <div className="card-body">
+                <p className="card-text">
+                  Email:
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={handleEmailChange}
+                    className="form-control"
+                  />
+                </p>
+                <p className="card-text">
+                  Password:
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={handlePasswordChange}
+                    className="form-control"
+                  />
+                </p>
+                {user.avatar && (
+                  <img
+                    src={user.avatar}
+                    alt="User Avatar"
+                    className="img-rounded img-thumbnail"
+                  />
+                )}
+                <button onClick={handleSave} className="btn btn-primary">
+                  Save Changes
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
